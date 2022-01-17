@@ -3,9 +3,16 @@ import cv2
 import math
 import subprocess
 
+picture_path = r"C:path"
+txt_file_path = r"C:path"
+width : int = 100
+
+
+make_ascii_image(picture_path, txt_file_path, width)
+
 
 #input img -> convert to gray frame -> resize -> convert to ascii -> format text file -> output as text file -> open text file
-def make_ascii_image(input_path: str, output_path: str,size : int):
+def make_ascii_image(input_path: str, output_path: str,width : int):
     img = cv2.imread(input_path)
     grayFrame = convert_to_gray_scale(img)
     grayFrame = resize_image(grayFrame, size)
